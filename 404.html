@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYNOCOR has moved to cynocor.com</title>
+  <meta name="description" content="CYNOCOR has a new home. Our website is now at cynocor.com.">
+  <link rel="canonical" href="https://cynocor.com/">
+  <link rel="icon" href="/assets/logo3W.png" type="image/png">
+  <noscript><meta http-equiv="refresh" content="5; url=https://cynocor.com/"></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #EBF3FC;
+      --text-primary: #08080C;
+      --text-secondary: #526077;
+      --accent: #0070FF;
+      --border: rgba(0, 90, 200, 0.1);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-card: 0 18px 44px rgba(15, 52, 105, 0.07), 0 2px 8px rgba(0, 112, 255, 0.04);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(50% 40% at 15% 20%, rgba(135, 196, 255, 0.35) 0%, transparent 70%),
+        radial-gradient(45% 45% at 85% 65%, rgba(120, 186, 255, 0.3) 0%, transparent 70%),
+        linear-gradient(180deg, #E4EEF9 0%, #F4F9FF 40%, #E8F2FC 100%);
+      background-attachment: fixed;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 560px;
+      text-align: center;
+      padding: 48px 40px 40px;
+      background: rgba(255, 255, 255, 0.82);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow-card);
+      animation: rise 0.7s var(--ease) both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .logo { display: block; height: 44px; width: auto; margin: 0 auto 36px; }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      margin-bottom: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(0, 112, 255, 0.08);
+      border: 1px solid rgba(0, 112, 255, 0.18);
+      border-radius: 999px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', 'Inter', sans-serif;
+      font-size: clamp(1.9rem, 5vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    p { color: var(--text-secondary); font-size: 1.05rem; }
+
+    .domains {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+      margin: 28px 0;
+      font-family: 'Space Grotesk', 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .old { color: var(--text-secondary); text-decoration: line-through; text-decoration-color: rgba(82, 96, 119, 0.5); }
+    .arrow { color: var(--accent); width: 22px; height: 22px; }
+    .new { color: var(--accent); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 32px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #FAFCFF;
+      text-decoration: none;
+      background: linear-gradient(135deg, #0070FF 0%, #1A85FF 100%);
+      border: 1px solid rgba(250, 252, 255, 0.25);
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(0, 112, 255, 0.38);
+      transition: filter 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    }
+    .btn:hover { filter: brightness(1.1); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0, 112, 255, 0.52); }
+    .btn:focus-visible { outline: 3px solid rgba(0, 112, 255, 0.4); outline-offset: 3px; }
+
+    .status { margin-top: 28px; font-size: 0.9rem; color: var(--text-secondary); }
+    .bar { height: 3px; margin: 14px auto 0; max-width: 220px; background: rgba(0, 112, 255, 0.12); border-radius: 3px; overflow: hidden; }
+    .bar span { display: block; height: 100%; width: 0; background: var(--accent); animation: fill 5s linear forwards; }
+    @keyframes fill { to { width: 100%; } }
+
+    @media (max-width: 520px) {
+      .card { padding: 36px 24px 32px; border-radius: 22px; }
+      .btn { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card { animation: none; }
+      .bar span { animation: none; width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <img class="logo" src="/assets/logo.png" alt="CYNOCOR">
+
+    <span class="badge">We've moved</span>
+    <h1>CYNOCOR has a new home</h1>
+    <p>Our website is now at a new address. Everything you're looking for is waiting for you there.</p>
+
+    <div class="domains" aria-label="cynocor.com.lk is now cynocor.com">
+      <span class="old">cynocor.com.lk</span>
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <span class="new">cynocor.com</span>
+    </div>
+
+    <a id="go" class="btn" href="https://cynocor.com/">Go to cynocor.com</a>
+
+    <p class="status" aria-live="polite">Redirecting you automatically in <span id="count">5</span>s&hellip;</p>
+    <div class="bar" aria-hidden="true"><span></span></div>
+  </main>
+
+  <script>
+    (function () {
+      // Keep the visitor's path, query and hash so old deep links land on the matching new page.
+      var target = 'https://cynocor.com' + location.pathname.replace(/\/index\.html$/, '/') + location.search + location.hash;
+      if (location.pathname === '/404.html') target = 'https://cynocor.com/';
+      document.getElementById('go').href = target;
+      var canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.href = target;
+
+      var n = 5, el = document.getElementById('count');
+      var t = setInterval(function () {
+        n -= 1;
+        if (n <= 0) { clearInterval(t); location.replace(target); return; }
+        el.textContent = n;
+      }, 1000);
+    })();
+  </script>
+</body>
+
+</html>
